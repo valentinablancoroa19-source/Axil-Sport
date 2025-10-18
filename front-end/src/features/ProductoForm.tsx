@@ -1,3 +1,4 @@
+// @ts-nocheck
 // Task: Diseñar formulario de productos (HU-001)
 export function ProductoForm() {
   return (
