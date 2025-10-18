@@ -1,0 +1,1 @@
+// Task: Crear endpoint NestJS para productos (HU-001)
