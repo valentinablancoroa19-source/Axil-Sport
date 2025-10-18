@@ -12,7 +12,7 @@ export function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* Aquí más adelante se agregarán rutas para productos, dashboard, etc. */}
+        <Route path="/productos" element={<ProductosPage />} /> 
       </Routes>
     </Router>
   );

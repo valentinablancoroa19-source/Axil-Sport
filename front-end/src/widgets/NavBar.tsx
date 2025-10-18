@@ -1,13 +1,35 @@
 // @ts-nocheck
-// Task: Crear componente Navbar (HU-002)
-// Descripción: Navbar principal con enlaces a Home y Productos.
+// Task: Crear componente NavBar (HU-002)
 
-export function NavBar() {
+export function Navbar() {
   return (
-    <nav style={{ padding: '10px', borderBottom: '1px solid #ddd' }}>
-      <a href="/" style={{ marginRight: 12 }}>Home</a>
-      <a href="/productos" style={{ marginRight: 12 }}>Productos</a>
-      <a href="/dashboard" style={{ marginRight: 12 }}>Dashboard</a>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        backgroundColor: "#111827",
+        padding: "10px 20px",
+        color: "white",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+        🏋️‍♂️
+        <h2 style={{ margin: 0 }}>Axil-Sport</h2>
+      </div>
+
+      <div style={{ display: "flex", gap: "15px" }}>
+        <a href="#" style={linkStyle}>Inicio</a>
+        <a href="#" style={linkStyle}>Suplementos</a>
+        <a href="#" style={linkStyle}>Promociones</a>
+        <a href="#" style={linkStyle}>Contacto</a>
+      </div>
     </nav>
   );
 }
+
+const linkStyle = {
+  color: "white",
+  textDecoration: "none",
+  fontWeight: "500",
+};
