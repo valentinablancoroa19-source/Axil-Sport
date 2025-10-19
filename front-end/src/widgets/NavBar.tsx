@@ -1,5 +1,6 @@
 // @ts-nocheck
 // Task: Crear componente NavBar (HU-002)
+import { Link } from 'react-router-dom';
 
 export function Navbar() {
   return (
@@ -19,10 +20,10 @@ export function Navbar() {
       </div>
 
       <div style={{ display: "flex", gap: "15px" }}>
-        <a href="#" style={linkStyle}>Inicio</a>
-        <a href="#" style={linkStyle}>Suplementos</a>
-        <a href="#" style={linkStyle}>Promociones</a>
-        <a href="#" style={linkStyle}>Contacto</a>
+        <Link to="/" style={linkStyle}>Inicio</Link>
+        <Link to="/productos" style={linkStyle}>Suplementos</Link>
+        <Link to="/promociones" style={linkStyle}>Promociones</Link>
+        <Link to="/contacto" style={linkStyle}>Contacto</Link>
       </div>
     </nav>
   );
@@ -33,3 +34,4 @@ const linkStyle = {
   textDecoration: "none",
   fontWeight: "500",
 };
+

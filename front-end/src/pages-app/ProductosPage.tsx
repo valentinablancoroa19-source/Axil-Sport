@@ -2,8 +2,6 @@
 // Task: Crear página de Productos (HU-002)
 // Descripción: Página que muestra una lista de productos simulada.
 
-import { Navbar } from "../widgets/Navbar";
-
 export function ProductosPage() {
   const productos = [
     { id: 1, nombre: "Balón de fútbol", marca: "Adidas", precio: 85000 },
@@ -12,18 +10,15 @@ export function ProductosPage() {
   ];
 
   return (
-    <div>
-      <Navbar />
-      <main style={{ padding: 20 }}>
-        <h1>Lista de Productos</h1>
-        <ul>
-          {productos.map((p) => (
-            <li key={p.id}>
-              {p.nombre} — {p.marca} — ${p.precio.toLocaleString()}
-            </li>
-          ))}
-        </ul>
-      </main>
-    </div>
+    <main style={{ padding: 20 }}>
+      <h1>Lista de Productos</h1>
+      <ul>
+        {productos.map((p) => (
+          <li key={p.id}>
+            {p.nombre} — {p.marca} — ${p.precio.toLocaleString()}
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }
