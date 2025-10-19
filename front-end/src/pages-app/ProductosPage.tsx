@@ -1,24 +1,44 @@
-// @ts-nocheck
-// Task: Crear página de Productos (HU-002)
-// Descripción: Página que muestra una lista de productos simulada.
+// src/pages-app/ProductosPage.tsx
+import React from "react";
 
-export function ProductosPage() {
-  const productos = [
-    { id: 1, nombre: "Balón de fútbol", marca: "Adidas", precio: 85000 },
-    { id: 2, nombre: "Tenis deportivos", marca: "Nike", precio: 220000 },
-    { id: 3, nombre: "Camiseta Dry-Fit", marca: "Puma", precio: 95000 },
-  ];
-
+export default function ProductosPage() {
   return (
-    <main style={{ padding: 20 }}>
-      <h1>Lista de Productos</h1>
-      <ul>
-        {productos.map((p) => (
-          <li key={p.id}>
-            {p.nombre} — {p.marca} — ${p.precio.toLocaleString()}
-          </li>
-        ))}
-      </ul>
-    </main>
+    <div style={{ padding: "40px", textAlign: "center" }}>
+      <h1 style={{ color: "#111827" }}>Productos</h1>
+      <p>Explora nuestra selección de productos deportivos 🏋️‍♂️</p>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "20px",
+          marginTop: "40px",
+        }}
+      >
+        <div
+          style={{
+            backgroundColor: "#f3f4f6",
+            borderRadius: "12px",
+            padding: "20px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h3>Zapatillas Pro</h3>
+          <p>Comodidad y rendimiento para cada entrenamiento.</p>
+        </div>
+
+        <div
+          style={{
+            backgroundColor: "#f3f4f6",
+            borderRadius: "12px",
+            padding: "20px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h3>Guantes Axil</h3>
+          <p>Protección y agarre total para tu rutina.</p>
+        </div>
+      </div>
+    </div>
   );
 }
